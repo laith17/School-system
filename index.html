@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="javascript/app.js" defer></script>
+    <script src="javascript/higherOrderFunction.js" defer></script>
+    <title>Sechool System</title>
+  </head>
+  <body>
+    <!--* Start Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-box">
+          <a href="index.html" class="logo-link">
+            <img
+              src="images/logo.png"
+              alt="An image of a logo"
+              class="logo-img"
+            />
+          </a>
+          <nav class="main-nav">
+            <ul class="main-nav-list">
+              <li class="list-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="list-item">
+                <a href="#">Register</a>
+              </li>
+              <li class="list-item">
+                <a href="#">News</a>
+              </li>
+              <li class="list-item">
+                <a href="#">About Us</a>
+              </li>
+              <li class="list-item">
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--* End Header -->
+
+    <main class="main">
+      <!--* Start Hero Section -->
+
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-box">
+            <h1 class="heading-primary">
+              Welcome to [School Name] - Where Excellence Meets Education
+            </h1>
+            <p class="text-primary">
+              In this vibrant and inclusive community, we nurture young minds to
+              become the leaders of tomorrow.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--* End Hero Section -->
+
+      <!--* Start Main Section -->
+
+      <section class="main-section">
+        <form class="form">
+          <div class="input-box">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required />
+          </div>
+          <div class="input-box">
+            <label for="dateOfBirth">Date Of Birth:</label>
+            <input type="date" id="dateOfBirth" required />
+          </div>
+          <label>Gender:</label>
+          <div class="input-box">
+            <input type="radio" id="male" name="gender" value="Male" required />
+            <label for="male">Male</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="Female"
+              required
+            />
+            <label for="female">Female</label>
+          </div>
+          <div class="input-box">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="number" id="phoneNumber" />
+          </div>
+          <div class="input-box">
+            <label for="grade">Grade</label>
+            <input type="text" id="grade" />
+          </div>
+          <div class="input-box">
+            <input type="button" id="submit" value="Enter" />
+          </div>
+        </form>
+      </section>
+
+      <!--* End Main Section -->
+    </main>
+  </body>
+</html>
