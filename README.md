@@ -2,7 +2,7 @@ This project is a small School system, where they can organize their students wi
 
 # Deployment
 
-Deployed Website: [https://LaithAlmajali.com](https://laith17.github.io/My-Portofolio/).
+Deployed Website: [https://School-System.com](https://laith17.github.io/School-system/).
 
 # Skills Used
 
