@@ -7,6 +7,9 @@ let row = 1;
 let index = 0;
 let cardInfoArray = [];
 
+//* Initialize cardInfoArray with existing data in local storage or an empty array
+cardInfoArray = JSON.parse(localStorage.getItem("cardInfoArray")) || [];
+
 //* Add an event listener for the DOMContentLoaded event to load the card data from local storage
 document.addEventListener("DOMContentLoaded", () => {
   //* Check if cardInfoArray exists in local storage
@@ -123,6 +126,10 @@ function add() {
     index++;
   } else {
     //* Show In A Card
+
+    //* Update the local storage with the updated cardInfoArray
+    localStorage.setItem("cardInfoArray", JSON.stringify(cardInfoArray));
+
     const card = new Card(
       fullName,
       dateOfBirth,
