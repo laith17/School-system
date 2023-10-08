@@ -7,6 +7,30 @@ let row = 1;
 let index = 0;
 let cardInfoArray = [];
 
+//* Add an event listener for the DOMContentLoaded event to load the card data from local storage
+document.addEventListener("DOMContentLoaded", () => {
+  //* Check if cardInfoArray exists in local storage
+  if (localStorage.getItem("cardInfoArray")) {
+    //* Retrieve the card data from local storage and parse it
+    const savedCardInfo = JSON.parse(localStorage.getItem("cardInfoArray"));
+
+    //* Loop through the saved card data and create cards for each entry
+    savedCardInfo.forEach((cardData) => {
+      const card = new Card(
+        cardData.fullName,
+        cardData.dateOfBirth,
+        cardData.gender,
+        cardData.major,
+        cardData.phoneNumber,
+        cardData.grade
+      );
+
+      const cardContainer = document.querySelector(".cards");
+      cardContainer.appendChild(card.createCardElement());
+    });
+  }
+});
+
 //* To Start The Page With The Table Selected
 document.getElementById("show").value = "Table";
 toggleDisplay();
@@ -60,17 +84,17 @@ function add() {
   const major = document.getElementById("major").value;
 
   //* Check if any of the required fields are empty
-  if (
-    !fullName ||
-    !dateOfBirth ||
-    !selectedValue ||
-    !major ||
-    !phoneNumber ||
-    !grade
-  ) {
-    alert("Please fill out all required fields.");
-    return;
-  }
+  // if (
+  //   !fullName ||
+  //   !dateOfBirth ||
+  //   !selectedValue ||
+  //   !major ||
+  //   !phoneNumber ||
+  //   !grade
+  // ) {
+  //   alert("Please fill out all required fields.");
+  //   return;
+  // }
 
   if (document.getElementById("show").value === "Table") {
     //* Show In A Table
